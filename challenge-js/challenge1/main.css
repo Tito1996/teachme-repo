@@ -1,0 +1,91 @@
+:root {
+  /** Colores **/
+  --main-bg-color: #000;
+  --main-text-color: #fff;
+  --selected-text-color: #000467;
+  --selected-text-bg-color: #f4e100;
+  --hamburguer-hover-color: #f40082;
+  --arrow-color: #ffd200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::selection {
+  background-color: var(--selected-text-bg-color);
+  color: var(--selected-text-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+}
+
+.hamburguesa,
+.arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+}
+
+.hamburguesa .arriba,
+.hamburguesa .medio,
+.hamburguesa .abajo {
+  width: 100%;
+  height: 1rem;
+  margin: 0.7rem 0;
+  background-color: var(--main-text-color);
+  border-radius: 2rem;
+}
+
+main .hamburguesa .pintar-rosa {
+  background-color: var(--hamburguer-hover-color);
+}
+
+.arrow {
+  align-items: end;
+}
+
+.arrow .arriba {
+  width: 50%;
+  height: 1rem;
+  background-color: var(--arrow-color);
+  border-radius: 2rem;
+
+  transform: rotate(45deg);
+}
+
+.arrow .medio {
+  margin: 0 1.6rem;
+  width: 80%;
+  height: 1rem;
+  background-color: var(--arrow-color);
+  border-radius: 2rem;
+}
+
+.arrow .abajo {
+  width: 50%;
+  height: 1rem;
+  background-color: var(--arrow-color);
+  border-radius: 2rem;
+
+  transform: rotate(315deg);
+}
